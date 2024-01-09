@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Exo 2', sans-serif;
+    background-image: linear-gradient(135deg, rgba(159, 159, 159, 0.46) 0%, rgba(159, 159, 159, 0.46) 14.286%,rgba(165, 165, 165, 0.46) 14.286%, rgba(165, 165, 165, 0.46) 28.572%,rgba(171, 171, 171, 0.46) 28.572%, rgba(171, 171, 171, 0.46) 42.858%,rgba(178, 178, 178, 0.46) 42.858%, rgba(178, 178, 178, 0.46) 57.144%,rgba(184, 184, 184, 0.46) 57.144%, rgba(184, 184, 184, 0.46) 71.43%,rgba(190, 190, 190, 0.46) 71.43%, rgba(190, 190, 190, 0.46) 85.716%,rgba(196, 196, 196, 0.46) 85.716%, rgba(196, 196, 196, 0.46) 100.002%),linear-gradient(45deg, rgb(252, 252, 252) 0%, rgb(252, 252, 252) 14.286%,rgb(246, 246, 246) 14.286%, rgb(246, 246, 246) 28.572%,rgb(241, 241, 241) 28.572%, rgb(241, 241, 241) 42.858%,rgb(235, 235, 235) 42.858%, rgb(235, 235, 235) 57.144%,rgb(229, 229, 229) 57.144%, rgb(229, 229, 229) 71.43%,rgb(224, 224, 224) 71.43%, rgb(224, 224, 224) 85.716%,rgb(218, 218, 218) 85.716%, rgb(218, 218, 218) 100.002%);
+    background-attachment: fixed;
+}
+.Title h1{
+    background-color: rgb(255, 255, 255);
+    margin: 0px auto 15px auto ;
+    padding: 10px;
+    border-radius: 15px ;
+   box-shadow: 10px 10px  12px #0000006c, inset 3px 3px 10px #00000075, inset -3px -3px 10px #121212;
+    width: fit-content;
+    
+}
+.navIcon{
+    color: white;
+    padding-bottom: 5px;
+    font-size: 20px;
+    filter: drop-shadow(0 0 10px);
+}
+
+.navItem, .activeNav{
+    color: rgb(0, 255, 26) !important;
+    text-shadow:  0 0 10px #37ff00, 0 0 20px #37ff00;
+}
+::-webkit-scrollbar{
+    width: 7px;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb{
+    color: red;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+
+/* Book card desions */
+
+.book-Card{
+    position: relative;
+    z-index: 100 ;
+    color: #ffffff;
+    text-shadow: 0 0 20px ;
+    background: none !important;
+}
+
+.book-Card::after {
+    border-radius: 7px;
+    z-index: -1;
+    background-size: cover;
+    background-image: url("https://img.freepik.com/free-photo/internet-library-online-education-concept_107791-15685.jpg?size=626&ext=jpg&ga=GA1.1.96916622.1703676470&semt=ais");
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+.book-Card::before {
+    border-radius: 6px;
+    background-color: #ffffff6f;
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    /* z-index: 10; */
+    left: 0px;
+    animation: color 2s linear infinite;
+    /* box-shadow: inset 5px 5px 10px rgb(249, 255, 136),
+    inset -5px -5px 10px rgb(0, 255, 26); */
+}
+@keyframes color {
+    0%{
+        filter: hue-rotate(0deg);
+         box-shadow: inset 5px 5px 10px rgba(249, 255, 136, 0.396),
+    inset -5px -5px 10px rgba(0, 255, 26, 0.51);
+    }
+    50%{
+        box-shadow: inset -5px -5px 10px rgba(249, 255, 136, 0.396),
+        inset 5px 5px 10px rgba(0, 255, 26, 0.51);
+        filter: hue-rotate(360deg);
+    }
+}
+
+.text-content{
+    z-index: 2;
+ }
+ .book-title{
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+    text-decoration: underline;
+ }
+ .book-description{
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    text-shadow: 1px 1px 4px rgb(148, 148, 148), -1px -1px 4px white;
+ }
+
+.homeWrapper{
+   margin: 20px;
+   display: flex;
+   justify-content: space-evenly;
+   gap: 15px;
+   flex-wrap: wrap;
+}
+.Table-container{
+    margin: 0 10px;
+    overflow-x: auto;
+}
+.BookBox{
+    transition: 0.4s;
+    cursor: pointer;
+}
+.BookBox:hover{
+    box-shadow: 5px 5px 15px rgb(60, 60, 60);
+    transform: translateY(-8px);
+}
+
+.edit-form{
+    display: grid;
+    justify-content: center;
+    padding: 30px;
+}
+
+.buttonGroup{
+    display: flex;
+    justify-content: space-around;
+}
+.formGroup{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+   gap: 0 20px;
+}
+.formGroup input{
+    width: 100%;
+}
+
+/* Show more details page desions */
+.container-fluid{
+    background-image: linear-gradient(45deg, rgba(187, 187, 187,0.04) 0%, rgba(187, 187, 187,0.04) 50%,rgba(86, 86, 86,0.04) 50%, rgba(86, 86, 86,0.04) 100%),linear-gradient(135deg, rgba(166, 166, 166,0.04) 0%, rgba(166, 166, 166,0.04) 50%,rgba(92, 92, 92,0.04) 50%, rgba(92, 92, 92,0.04) 100%),linear-gradient(90deg, rgb(20,20,20),rgb(20,20,20)); background-size: 142px 142px;
+}
+.showMoreContainer{
+    color: white;
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(45deg, rgba(187, 187, 187,0.04) 0%, rgba(187, 187, 187,0.04) 50%,rgba(86, 86, 86,0.04) 50%, rgba(86, 86, 86,0.04) 100%),linear-gradient(135deg, rgba(166, 166, 166,0.04) 0%, rgba(166, 166, 166,0.04) 50%,rgba(92, 92, 92,0.04) 50%, rgba(92, 92, 92,0.04) 100%),linear-gradient(90deg, rgb(20,20,20),rgb(20,20,20)); 
+    background-size: 142px 142px;
+}
+.More-img-box{
+    display: flex;
+    justify-content: center;
+}
+.More-img-box img{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+.cart-Image{
+   filter: drop-shadow(0 0 20px #70fff3c0);
+   
+}
+.showMoreCard{
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.bold-Text{
+    text-shadow: 0 0 10px aqua;
+}
+
+/* Toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+@media only screen and (max-width: 600px) {
+    .textContent-right{
+        width: 100%;
+    }
+    .textContent-left{
+        width: 100%;
+    }
+  }
