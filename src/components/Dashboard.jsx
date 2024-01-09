@@ -3,7 +3,7 @@ import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import AxiosService from './utils/ApiService'
 import { useNavigate } from 'react-router-dom';
-import { Axios } from 'axios';
+import { toast } from 'react-toastify';
 
 const Dashboard =  () => {
    let navigate = useNavigate()
@@ -24,9 +24,10 @@ const Dashboard =  () => {
      try {
       let res = await AxiosService.delete(`/books/${id}`)
       getData()
-
-     } catch (error) {
+      toast.success("Book Deleted Successfully")
+    } catch (error) {
       
+      toast.error("Internal Server Error")
      }
   }
  
@@ -56,10 +57,6 @@ const Dashboard =  () => {
                 <td>{e.title}</td>
                 <td>{e.authorInfo.birthDate}</td>
                 <td>{e.publicationDate}</td>
-                {/* <td><label class="switch">
-<input type="checkbox" />
-<span class="slider round"></span>
-</label></td> */}
                 <td>
                     <Button onClick={()=> navigate(`/edit/${e.id}`)} variant="info">Edit</Button>{" "}
                     &nbsp;
