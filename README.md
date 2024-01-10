@@ -2,6 +2,20 @@
 
 Welcome to the Book Management Application! This web application allows users to manage book records and author information with ease. Below are key features and guidelines for using the application.
 
+## How to use this application
+
+### Home Page
+
+- **View All Books:** The home page displays all the available books. Click on any book card to view its complete details on a dedicated page.
+
+### Dashboard Page
+
+- **Edit and Delete Book Records:** Navigate to the dashboard page to edit or delete book records. Click on the respective buttons for the desired action.
+
+### Add Book Page
+
+- **Add New Book:** Visit the Add Book page to add a new book to the system. Fill in the required details and click on the submit button.
+
 ## Features
 
 ### Book Records Management
